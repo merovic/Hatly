@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@+id/toolbar_actionbar_en"
+        layout="@layout/toolbar_default_en"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layoutDirection="rtl"
+            android:id="@+id/container">
+
+
+            <ImageView
+                android:id="@+id/productimage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/food"/>
+
+            <TextView
+                android:id="@+id/producttitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pizza Oriental - With Sausages"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/myNavigationColor"
+                android:layout_margin="7dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_gravity="center"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myNavigationColor"
+                    android:text="Price: "/>
+
+                <TextView
+                    android:id="@+id/productprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myNavigationColor"
+                    android:textStyle="bold"
+                    android:text="120 LE"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/myNavigationColor"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="7dp"/>
+
+            <TextView
+                android:id="@+id/productdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and various other ingredients"
+                android:textSize="14sp"
+                android:textColor="#838382"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"/>
+
+            <LinearLayout
+                android:id="@+id/quantitylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myNavigationColor"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:text="Quantity"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/increment"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/myPrimaryColor"
+                        android:textColor="@color/myDrawerBackground"
+                        android:text="+"/>
+
+                    <TextView
+                        android:id="@+id/value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:text="0"/>
+
+                    <Button
+                        android:id="@+id/decrement"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/myPrimaryColor"
+                        android:textColor="@color/myDrawerBackground"
+                        android:text="-"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_gravity="center"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myNavigationColor"
+                    android:text="Total Price: "/>
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myNavigationColor"
+                    android:textStyle="bold"
+                    android:text="0 LE"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estmated Delevary Time"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/myNavigationColor"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="7dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35 - 45 min"
+                android:textSize="15sp"
+                android:layout_gravity="center" />
+
+
+            <Button
+                android:id="@+id/buy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/myPrimaryColor"
+                android:text="Make Order"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="bottom"
+                android:textColor="@color/myDrawerBackground"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order will be Sent to Nearest 8 Persons and you can Mange their offers"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
